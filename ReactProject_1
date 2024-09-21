@@ -1,0 +1,334 @@
+REACT PROJECT FOR STUDENT INFORMATION MANAGEMENT SYSTEM
+
+HEADER.JS
+
+// src/components/Header.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
+
+const Header = () => {
+  return (
+    <header className="header">
+      <nav>
+        <h1>Student Information Management System</h1>
+        <ul>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/">Login</Link></li>
+          <li><Link to="/register">Register</Link></li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;
+
+HEADER.CSS
+
+/* src/components/Header.css */
+.header {
+    background-color: #5ae7a8;
+    padding: 10px 20px;
+    color: rgb(15, 15, 15);
+  }
+  
+  .header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .header ul li {
+    display: inline;
+  }
+  
+  .header ul li a {
+    color: rgb(2, 2, 2);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .header ul li a:hover {
+    text-decoration: underline;
+  }
+  
+FOOTER.JS
+
+// src/components/Footer.js
+import React from 'react';
+import './Footer.css';
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <p>&copy; 2024 Student Information Management System</p>
+    </footer>
+  );
+};
+
+export default Footer;
+
+FOOTER.CSS
+
+/* src/components/Footer.css */
+.footer {
+    background-color: #4ec98d;
+    color: rgb(24, 23, 23);
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+HOME.JS
+
+// src/components/Home.js
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import './Home.css';
+
+const Home = () => {
+  return (
+    <>
+      <Header />
+      <div className="home-container">
+        <h2>Welcome to the Student Information Management System</h2>
+        <p>This system allows you to manage and view student information efficiently.</p>
+        <p>Please login or register to continue.</p>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default Home;
+
+HOME.CSS
+
+/* src/components/Home.css */
+.home-container {
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    background-color: rgb(244, 244, 248);
+  }
+  
+  .home-container h2 {
+    margin-bottom: 20px;
+  }
+  
+LOGIN.JS
+
+// src/components/Login.js
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Login.css';
+
+const Login = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Implement your login logic here
+    console.log("User logged in!");
+    navigate('/home');
+  };
+
+  return (
+    <div className="login-container">
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Email:</label>
+          <input type="email" required />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" required />
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <p>
+        Don't have an account? <Link to="/register">Register here</Link>
+      </p>
+    </div>
+  );
+};
+
+export default Login;
+
+LOGIN.CSS
+
+/* src/components/Login.css */
+.login-container, .register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #4cbb90;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  p {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+
+REGISTER.JS
+
+// src/components/Register.js
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Register.css';
+
+const Register = () => {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Implement your registration logic here
+    console.log("User registered!");
+    navigate('/');
+  };
+
+  return (
+    <div className="register-container">
+      <h2>Register</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Email:</label>
+          <input type="email" required />
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" required />
+        </div>
+        <button type="submit">Register</button>
+      </form>
+      <p>
+        Already have an account? <Link to="/">Login here</Link>
+      </p>
+    </div>
+  );
+};
+
+export default Register;
+
+REGISTER.CSS
+
+/* src/components/Login.css */
+
+.login-container, .register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #52bc8a;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  p {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+APP.JS
+
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
+import Home from './components/Home';
+
+const App = () => {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
+
+
+APP.CSS
+
+.App {
+  font-family: Arial, sans-serif;
+}
+
