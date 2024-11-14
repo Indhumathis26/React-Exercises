@@ -1,0 +1,126 @@
+/* Students.css */
+
+/* Container for the students page */
+.students-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Heading styles */
+.students-container h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 2rem;
+  color: #24b530;
+}
+
+/* Add student form */
+.students-container div {
+  margin: 20px 0;
+  text-align: left;
+}
+
+/* Input styles */
+.students-container input[type="text"],
+.students-container input[type="email"] {
+  width: calc(50% - 10px);
+  padding: 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.students-container button {
+  padding: 8px 16px;
+  margin-top: 10px;
+  background-color: #1ebc2e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.students-container button:hover {
+  background-color: #20c850;
+}
+
+/* Table styles */
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.students-table th,
+.students-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.students-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.students-table td {
+  background-color: #fafafa;
+}
+
+.students-table td button {
+  margin: 0 4px;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.modal-content p {
+  margin: 8px 0;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.modal-content .close:hover {
+  color: #333;
+}

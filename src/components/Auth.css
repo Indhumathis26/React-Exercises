@@ -1,0 +1,184 @@
+/* Auth.css */
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height to center vertically */
+  background-color: #f9f9f9; /* Background color */
+}
+
+.auth-container {
+  width: 350px; /* Increased width for better layout */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  background-color: white; /* Container background color */
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column; /* Align inputs vertically */
+}
+
+.auth-form input {
+  margin-bottom: 15px; /* Space between inputs */
+  padding: 10px; /* Padding inside inputs */
+  border: 1px solid #ccc; /* Input border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff; /* Button color */
+  color: white; /* Button text color */
+  cursor: pointer; /* Pointer on hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.error-message {
+  color: red; /* Error message color */
+  margin-bottom: 10px; /* Space below the error message */
+}
+
+.redirect-text {
+  text-align: center; /* Center text */
+  margin-top: 15px; /* Space above */
+}
+
+.login-link,
+.register-link {
+  color: #007bff; /* Link color - blue */
+  cursor: pointer; /* Pointer on hover */
+  text-decoration: underline; /* Underline to indicate it's a link */
+}
+
+.login-link:hover,
+.register-link:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+/* Add to Auth.css */
+
+.social-login {
+  margin-top: 20px; /* Space above social login section */
+  text-align: center; /* Center the text */
+}
+
+.social-buttons {
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center the buttons */
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px; /* Space above the buttons */
+}
+
+.social-btn {
+  padding: 10px 15px; /* Padding inside the buttons */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; /* Pointer on hover */
+  color: white; /* Button text color */
+}
+
+.google {
+  background-color: #db4437; /* Google red color */
+}
+
+.facebook {
+  background-color: #4267b2; /* Facebook blue color */
+}
+
+.twitter {
+  background-color: #1da1f2; /* Twitter blue color */
+}
+
+.social-btn:hover {
+  opacity: 0.9; /* Slight transparency on hover */
+}
+/* Add to Auth.css */
+
+.forgot-password {
+  margin-top: 10px; /* Space above the link */
+  text-align: center; /* Center the text */
+  color: blue; /* Text color for the link */
+  cursor: pointer; /* Pointer on hover */
+  text-decoration: underline; /* Underline the link */
+}
+
+.forgot-password:hover {
+  opacity: 0.8; /* Slight transparency on hover */
+}
+/* Overlay for authentication modals */
+.auth-overlay {
+  background-color: rgba(0, 0, 0, 0.75); /* Dark semi-transparent background */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: fixed; /* Fixed position to cover the entire screen */
+  top: 0; /* Start from the top */
+  left: 0; /* Start from the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  z-index: 1000; /* Ensure it is above other elements */
+}
+
+/* Modal styles */
+.auth-modal {
+  background: white; /* White background for the modal */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  width: 400px; /* Fixed width */
+  max-width: 90%; /* Responsive maximum width */
+  padding: 20px; /* Padding inside the modal */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: flex-start; /* Align items to the top */
+  overflow: hidden; /* Prevent overflow */
+}
+
+/* Styles for form elements */
+.auth-modal input[type="text"],
+.auth-modal input[type="password"],
+.auth-modal input[type="email"],
+.auth-modal button {
+  width: 100%; /* Full width for inputs and buttons */
+  padding: 10px; /* Padding for inputs and buttons */
+  margin: 10px 0; /* Space between elements */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Button styles */
+.auth-modal button {
+  background-color: #007bff; /* Primary button color */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.auth-modal button:hover {
+  background-color: #0056b3; /* Darker on hover */
+}
+
+/* Close button */
+.close-btn {
+  background: transparent; /* Transparent background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  color: #555; /* Color for close button */
+  font-size: 1.5rem; /* Font size */
+  position: absolute; /* Position to the top right */
+  top: 15px; /* Space from top */
+  right: 15px; /* Space from right */
+}
+
+/* Styling for modal title */
+.auth-modal h2 {
+  margin-bottom: 15px; /* Space below title */
+}

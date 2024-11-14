@@ -1,0 +1,203 @@
+/* General container styles */
+.grades-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.description {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+/* Filter section */
+.grades-filters {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.filter-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #45a049;
+}
+
+/* Filter details */
+.filter-details {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.filter-details h3 {
+  margin-bottom: 15px;
+}
+
+/* Grade distribution chart */
+.grades-graph {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.chart-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* GPA section */
+.gpa-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.gpa-btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.gpa-btn:hover {
+  background-color: #1e88e5;
+}
+
+.gpa-result {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Grade breakdown */
+.subject-breakdown {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.breakdown-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.breakdown-btn {
+  background-color: #FFC107;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.breakdown-btn:hover {
+  background-color: #ffb300;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+.close-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.close-btn:hover {
+  background-color: #e53935;
+}
+
+/* Grade history, achievements, performance analysis */
+.grade-history, .achievements, .performance-analysis {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grade-history h2, .achievements h2, .performance-analysis h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.download-report-btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.download-report-btn:hover {
+  background-color: #1e88e5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .filter-buttons, .breakdown-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grades-graph {
+    margin-bottom: 20px;
+  }
+
+  .chart-wrapper {
+    max-width: 100%;
+  }
+}
